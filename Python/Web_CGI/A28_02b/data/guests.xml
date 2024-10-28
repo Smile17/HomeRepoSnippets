@@ -1,0 +1,22 @@
+<guests>
+  <guest>
+    <full_name>John Smith</full_name>
+    <number>101</number>
+    <num_of_days>5</num_of_days>
+  </guest>
+  <guest>
+    <full_name>Alice Johnson</full_name>
+    <number>102</number>
+    <num_of_days>3</num_of_days>
+  </guest>
+  <guest>
+    <full_name>Michael Brown</full_name>
+    <number>103</number>
+    <num_of_days>7</num_of_days>
+  </guest>
+  <guest>
+    <full_name>Emily Davis</full_name>
+    <number>104</number>
+    <num_of_days>2</num_of_days>
+  </guest>
+<guest><full_name>New customer</full_name><number>101</number><num_of_days>3</num_of_days></guest><guest><full_name>New customer</full_name><number>101</number><num_of_days>5</num_of_days></guest></guests>

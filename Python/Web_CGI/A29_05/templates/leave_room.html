@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hotel</title>
+  <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+  <h1>Оновлення резервації</h1>
+  <form method="POST" action="/leave_room">
+    <select name="reser_id">
+      $reservations
+    </select>
+    <p name="hotel">
+      $hotel_numbers
+    </p>
+    <input type="submit" value="Оновити">
+  </form>
+  <br>
+  <a href="/" title="Повернутися на головну">Повернутися на головну</a>
+  <p>$result</p>
+</body>
+</html>

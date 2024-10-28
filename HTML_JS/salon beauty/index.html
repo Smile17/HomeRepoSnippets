@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон краси "Венера"</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #e8e3df;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 1000;
+        }
+        header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #e8e3df;
+}
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 20px;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ccc;
+        }
+
+        nav a.active {
+            background-color: #9f3730;
+            color: #fff;
+        }
+
+        #index {
+            background-image: url('background.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 0;
+        }
+
+        #index h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5em;
+            color: #9f3730;
+            margin: 10px 0;
+        }
+
+        #about,
+        #services,
+        #masters,
+        #prices,
+        #contact {
+            padding: 50px 20px;
+        }
+
+        .columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+        .column {
+            flex: 0 1 calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .rounded-column {
+            border-radius: 15px;
+            background-color: #9f3730;
+            color: #fff;
+        }
+
+        footer {
+            background-color: #9f3730;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 150px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        #logo-title-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            margin-right: 10px;
+        }
+        #services-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        #services-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        #services-dropdown:hover #services-dropdown-content {
+            display: block;
+        }
+
+        #services-dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        #services-dropdown-content a:hover {
+            background-color: #ccc;
+        }
+        nav ul li:not(:hover) a.active {
+    background-color: #9f3730;
+    color: #fff;
+}
+
+nav a.active {
+    background-color: #e8e3df;
+    color: #333;
+}
+    </style>
+    
+</head>
+
+<body>
+
+    <header>
+        <div id="logo-title-container">
+            <img id="logo" src="images/logo.png" alt="Логотип Салону краси Венера">
+            <h1 style="font-size: 1.5em; color: #9f3730;">Салон краси - Венера</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href class="active">Головна</a></li>
+                <li id="services-dropdown">
+                    <a href="#services">Послуги</a>
+                    <div id="services-dropdown-content">
+                        <a href="#services">Стрижка та укладка</a>
+                        <a href="#services">Манікюр та педікюр</a>
+                        <a href="#services">Фарбування волосся</a>
+                        <a href="#services">Косметичні процедури обличчя</a>
+                        <a href="#services">Ламінування брів/вій</a>
+                        <a href="#services">Макіяж</a>
+                    </div>
+                </li>
+                <li><a href="masters.html">Майстри</a></li>
+                <li><a href="prices.html">Тарифи</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="about">
+        <h2 style="text-align: center; color: #9f3730;">Про нас</h2>
+        <p>
+            Салон краси "Венера" - це не просто місце, де ви можете насолодитися процедурами краси,
+            але і особливий світ, де кожен клієнт - це унікальна історія краси та самовираження.
+        </p>
+        <p>
+            Наш салон пропонує широкий спектр послуг, від модельних стрижок і розкішного фарбування
+            волосся до індивідуальних сеансів манікюру та педікюру. Ми завжди стежимо за останніми
+            тенденціями у світі краси та використовуємо тільки найкращі продукти для догляду за вами.
+        </p>
+        <p>
+            Наші кваліфіковані майстри з великим досвідом готові зробити все можливе, щоб ви відчулися
+            впевнено та красиво. Ми прагнемо до індивідуального підходу до кожного клієнта, розуміючи його
+            унікальність та особливості.
+        </p>
+        <p>
+            Ласкаво запрошуємо до салону краси "Венера", де кожен візит - це подорож до світу вашої власної
+            краси та стилю. Довірте свій образ професіоналам, і ми зробимо все можливе, щоб ви вирушили з
+            нашого салону з посмішкою та враженням.
+        </p>
+    </section>
+    
+
+    <section id="services">
+        <h2 style="text-align: center; color: #9f3730;"> Наші послуги</h2>
+        <div class="columns">
+            <div class="column" style="background-color: #e8e3df; border-radius: 8px;">
+                <h3 style="font-weight: bold;">Стрижка та укладка</h3>
+                <p>Наші майстри готові створити стильні стрижки та укладки, які підкреслять вашу красу.</p>
+            </div>
+            <div class="column" style="background-color: #e8e3df; border-radius: 8px;">
+                <h3 style="font-weight: bold;">Фарбування волосся</h3>
+                <p>Великий вибір кольорів та технік фарбування для створення неповторного образу.</p>
+            </div>
+            <div class="column" style="background-color: #e8e3df; border-radius: 8px;">
+                <h3 style="font-weight: bold;">Манікюр та педікюр</h3>
+                <p>Доглянуті руки та ноги - ключ до впевненості. Наші майстри вам у цьому допоможуть.</p>
+            </div>
+            <div class="column" style="background-color: #e8e3df; border-radius: 8px;">
+                <h3 style="font-weight: bold;">Косметичні процедури обличчя</h3>
+                <p>Надаємо широкий спектр косметичних процедур для вашого обличчя, щоб ви завжди виглядали свіже та молодо.</p>
+            </div>
+            <div class="column" style="background-color: #e8e3df; border-radius: 8px;">
+                <h3 style="font-weight: bold;">Ламінування брів/вій</h3>
+                <p>Додаємо об'єм та ефектність вашим брівам та віям за допомогою ламінування.</p>
+            </div>
+            <div class="column" style="background-color: #e8e3df; border-radius: 8px;">
+                <h3 style="font-weight: bold;">Макіяж</h3>
+                <p>Професійний макіяж для будь-якого важливого заходу чи події. Вибір стилю за вашим бажанням.</p>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="gallery">
+        <h2 style="text-align: center; color: #9f3730;">Галерея</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/photo1.png" alt="Фото 1">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo2.png" alt="Фото 2">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo3.png" alt="Фото 3">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo4.png" alt="Фото 4">
+            </div>
+            <div class="gallery-item">
+                <img src="images/photo5.png" alt="Фото 5">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        #gallery {
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .gallery-item {
+            margin: 10px;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+<script>
+/// фіксоване меню
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+
+    // Отримання висоти верхнього колонтитулу
+    const headerHeight = header.offsetHeight;
+
+    // Функція для перевірки прокрутки та застосування класу
+    function checkScroll() {
+        if (window.scrollY > headerHeight) {
+            header.classList.add("fixed");
+        } else {
+            header.classList.remove("fixed");
+        }
+    }
+
+    // Викликати функцію при прокрутці сторінки
+    window.addEventListener("scroll", checkScroll);
+
+    // Викликати функцію відразу для перевірки при завантаженні сторінки
+    checkScroll();
+});
+
+</script>
+
+    <footer>
+        <p>&copy; 2024 Салон краси "Венера". Усі права захищені.</p>
+    </footer>
+</body>
+
+</html>

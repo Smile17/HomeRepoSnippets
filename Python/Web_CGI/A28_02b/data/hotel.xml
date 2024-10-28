@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<data>
+  <rooms>
+    <room>
+      <number>101</number>
+      <type>Luxury</type>
+      <price_per_night>200</price_per_night>
+    </room>
+    <room>
+      <number>102</number>
+      <type>Budget</type>
+      <price_per_night>100</price_per_night>
+    </room>
+    <room>
+      <number>103</number>
+      <type>Resort</type>
+      <price_per_night>300</price_per_night>
+    </room>
+    <room>
+      <number>104</number>
+      <type>Boutique</type>
+      <price_per_night>250</price_per_night>
+    </room>
+  </rooms>
+</data>

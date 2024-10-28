@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Салон краси "Венера" - Тарифи</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #e8e3df;
+            padding: 5px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            z-index: 1000;
+        }
+        header.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #e8e3df;
+}
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            margin-right: 20px; 
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #ccc;
+        }
+
+        nav a.active {
+            background-color: #9f3730;
+            color: #fff;
+        }
+
+        #prices {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .prices-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .price-card {
+            flex: 0 1 calc(33.33% - 20px);
+            margin: 10px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid #9f3730; 
+        }
+
+        .appointment-form {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        footer {
+            background-color: #9f3730;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 150px;
+            height: auto;
+            margin: 10px 0;
+        }
+
+        #logo-title-container {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo {
+            margin-right: 10px;
+        }
+        #services-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        #services-dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        #services-dropdown:hover #services-dropdown-content {
+            display: block;
+        }
+
+        #services-dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        #services-dropdown-content a:hover {
+            background-color: #ccc;
+        }
+        nav ul li:not(:hover) a.active {
+    background-color: #9f3730;
+    color: #fff;
+}
+.step-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+
+        .step-form label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .step-form select,
+        .step-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+        }
+
+        .step-form button {
+            background-color: #9f3730;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .confirmation-block {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .confirmation-block p {
+            color: #9f3730;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-block button {
+            background-color: #9f3730;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div id="logo-title-container">
+            <a href="index.html">
+                <img id="logo" src="images/logo.png" alt="Логотип Салону краси Венера">
+            </a>
+            <h1 style="font-size: 1.5em; color: #9f3730;">Салон краси - Венера</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li id="services-dropdown">
+                    <a href="index.html#services.html">Послуги</a>
+                    <div id="services-dropdown-content">
+                        <a href="index.html#services">Стрижка та укладка</a>
+                        <a href="index.html#services">Манікюр та педікюр</a>
+                        <a href="index.html#services">Фарбування волосся</a>
+                        <a href="index.html#services">Косметичні процедури обличчя</a>
+                        <a href="index.html#services">Ламінування брів/вій</a>
+                        <a href="index.html#services">Макіяж</a>
+                    </div>
+                </li>
+                <li><a href="masters.html">Майстри</a></li>
+                <li><a href="prices.html" class="active">Тарифи</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="prices">
+        <h2 style="text-align: center; color: #9f3730;">Тарифи</h2>
+        <div class="prices-container">
+            <div class="price-card">
+                <h3>Чоловіча стрижка, фарбування волосся та укладка</h3>
+                <p>Ціна: 1000 грн</p>
+                <p>Тривалість: 1 година</p>
+            </div>
+            
+            <div class="price-card">
+                <h3>Манікюр</h3>
+                <p>Ціна: 800 грн </p>
+                <p>Тривалість: 1 година 30 хвилин</p>
+            </div>
+            
+            <div class="price-card">
+                <h3>Фарбування волосся (жіноче)</h3>
+                <p>Ціна: 2500+ грн (залежно від довжини волосся)</p>
+                <p>Тривалість: 2-3 години</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Ламінування брів/вій</h3>
+                <p>Ціна: 700 грн</p>
+                <p>Тривалість: 1 година 30 хвилин</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Жіноча стрижка та укладка</h3>
+                <p>Ціна: 1000+ грн (залежно від довжини волосся)</p>
+                <p>Тривалість: 1-2 години</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Макіяж</h3>
+                <p>Ціна: 700-1500 грн</p>
+                <p>Тривалість: 1 година 30 хвилин</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Косметичні процедури обличчя</h3>
+                <p>Ціна: 400-2500 грн (в залежності від процедури)</p>
+                <p>Тривалість: 2-3 години</p>
+            </div>
+
+            <div class="price-card">
+                <h3>Педікюр</h3>
+                <p>Ціна: 700-1000 грн</p>
+                <p>Тривалість: 1 година 30 хвилин</p>
+            </div>
+
+        </div>
+        
+  <!-- Етап 1: Вибір послуг -->
+  <div id="service-selection" class="step-form">
+    <h3 style="color: #9f3730;">Вибір послуг</h3>
+    <form action="#" method="post" id="serviceSelectionForm">
+        <label for="service">Послуга:</label>
+        <select id="service" name="service" required>
+            <option value="haircutmen">Стрижка та укладка чоловіча</option>
+            <option value="manicure">Манікюр</option>
+            <option value="haircutwomen">Жіноча стрижка та укладка</option>
+            <option value="hairColor">Фарбування волосся жіноче</option>
+            <option value="makeup">Макіяж</option>
+            <option value="laminuv">Ламінування брів/вій</option>
+            <option value="ped">Педікюр</option>
+            <option value="estetic">Косметичні процедури обличчя</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="showNextStep(2)">Далі</button>
+    </form>
+</div>
+
+<!-- Етап 2: Вибір майстра та дати і часу -->
+<div id="master-selection" class="step-form" style="display: none;">
+    <h3 style="color: #9f3730;">Вибір майстра та дати і часу</h3>
+    <form action="#" method="post" id="masterSelectionForm">
+        <label for="master">Майстер:</label>
+        <select id="master" name="master" required>
+            <option value="master1">Шевченко Анастасія Леонідівна</option>
+            <option value="master2">Клюка Аліна Андріївна</option>
+            <option value="master3">Петік Христина Максимівна</option>
+            <option value="master4">Сидоренко Микита Данилович</option>
+            <option value="master5">Силенко Владислав Макарович</option>
+            <option value="master6">Ржавський Микита Дмитрович</option>
+        </select>
+        <br><br>
+        <label for="date">Дата:</label>
+        <input type="date" id="date" name="date" required><br><br>
+
+        <label for="time">Час:</label>
+        <input type="time" id="time" name="time" required><br><br>
+
+        <button type="button" onclick="showNextStep(3)">Далі</button>
+    </form>
+</div>
+
+<!-- Етап 3: Підтвердження запису -->
+<div id="confirmationBlock" class="confirmation-block">
+    <p>Ваша інформація успішно збережена!</p>
+    <button onclick="hideConfirmationBlock()">Закрити</button>
+</div>
+
+<script>
+    function showNextStep(step) {
+        if (step === 2) {
+            const serviceDropdown = document.getElementById("service");
+            const selectedIndex = serviceDropdown.selectedIndex;
+
+            if (selectedIndex === -1) {
+                alert("Будь ласка, оберіть послугу перед переходом до наступного кроку.");
+                return;
+            }
+        }
+
+        if (step === 3) {
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+
+            if (!date || !time) {
+                alert("Будь ласка, оберіть дату та час перед переходом до наступного кроку.");
+                return;
+            }
+            document.getElementById("confirmationBlock").style.display = "block";
+        }
+
+        const currentStep = document.getElementById("service-selection");
+        const nextStep = document.getElementById("master-selection");
+
+        if (currentStep && nextStep) {
+            currentStep.style.display = "none";
+            nextStep.style.display = "block";
+        }
+    }
+
+    function hideConfirmationBlock() {
+        document.getElementById("confirmationBlock").style.display = "none";
+    }
+
+    /// фіксоване меню
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const header = document.querySelector("header");
+
+    // Отримання висоти верхнього колонтитулу
+    const headerHeight = header.offsetHeight;
+
+    // Функція для перевірки прокрутки та застосування класу
+    function checkScroll() {
+        if (window.scrollY > headerHeight) {
+            header.classList.add("fixed");
+        } else {
+            header.classList.remove("fixed");
+        }
+    }
+
+    // Викликати функцію при прокрутці сторінки
+    window.addEventListener("scroll", checkScroll);
+
+    // Викликати функцію відразу для перевірки при завантаженні сторінки
+    checkScroll();
+});
+
+</script>
+        
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Салон краси "Венера". Усі права захищені.</p>
+    </footer>
+    
+    
+</body>
+</html>

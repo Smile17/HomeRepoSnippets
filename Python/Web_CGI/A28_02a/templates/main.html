@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Hotel</title>
+  <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+  <h1>Список кімнат</h1>
+  <table>
+      <thead>
+            <tr>
+                <th>Номер кімнати</th>
+                <th>Тип</th>
+                <th>Ціна за ніч</th>
+            </tr>
+      </thead>
+    <tbody>
+            <!-- Row example
+             <tr>
+                <td>101</td>
+                <td>Luxury</td>
+                <td>200 UAH</td>
+            </tr>
+             -->
+            $hotel_rooms
+        </tbody>
+  </table>
+  <hr>
+  <h1>Резервація</h1>
+  <form method="POST" action="/">
+    <input type="text" name="full_name" value="" placeholder="ПІБ">
+    <select name="hotel">
+      $hotel_numbers
+    </select>
+    <input type="text" name="num_of_days" value="" placeholder="Кількість днів">
+    <input type="submit" value="Зареєструвати">
+  </form>
+    <hr>
+    <h1>Список резервацій</h1>
+      <table>
+          <thead>
+                <tr>
+                    <th>ПІБ</th>
+                    <th>Номер кімнати</th>
+                    <th>Кількість ночей</th>
+                    <th>Загальна ціна</th>
+                </tr>
+          </thead>
+        <tbody>
+                <!-- Row example
+                 <tr>
+                    <td>John Smith</td>
+                    <td>101</td>
+                    <td>5</td>
+                    <td>1000</td>
+                </tr>
+                 -->
+                $hotel_reservations
+            </tbody>
+      </table>
+  <hr>
+</body>
+</html>

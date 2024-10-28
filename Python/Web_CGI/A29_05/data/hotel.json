@@ -1,0 +1,22 @@
+[
+  {
+    "number": "101",
+    "type": "Luxury",
+    "price_per_night": 200
+  },
+  {
+    "number": "102",
+    "type": "Budget",
+    "price_per_night": 100
+  },
+  {
+    "number": "103",
+    "type": "Resort",
+    "price_per_night": 300
+  },
+  {
+    "number": "104",
+    "type": "Boutique",
+    "price_per_night": 250
+  }
+]
